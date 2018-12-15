@@ -20,7 +20,6 @@ function showCoords(event) {
 	var node = document.createElement("div");
     
 	var word=((document.getSelection(event).toString()).trim()).toLowerCase();
-	//var url='https://api.pearson.com/v2/dictionaries/ldoce5/entries?headword='+word
 	
 	if(word!="" && gflag==0){
 		var url='https://api.pearson.com/v2/dictionaries/ldoce5/entries?headword='+word;
@@ -40,7 +39,6 @@ function showCoords(event) {
 					var str=myJson.results[i].senses[0].definition;
 					
 					var textnode = document.createTextNode(str);
-					//textnode.style.fontSize="medium";
 					node.appendChild(textnode);
 					sEle.appendChild(node);
 					gflag=1;
@@ -59,7 +57,6 @@ function showCoords(event) {
 						var str=myJson.results[i].senses[0].definition;
 						
 						var textnode = document.createTextNode(str);
-						//textnode.style.fontSize="medium";
 						node.appendChild(textnode);
 						sEle.appendChild(node);
 						flag=1;
@@ -209,7 +206,6 @@ function showCoords(event) {
 								var str=myJson.results[i].senses[0].definition;
 								
 								var textnode = document.createTextNode(str);
-								//textnode.style.fontSize="medium";
 								node.appendChild(textnode);
 								sEle.appendChild(node);
 								flag=1;
@@ -240,7 +236,6 @@ function showCoords(event) {
 							var str=myJson.results[i].senses[0].definition;
 							
 							var textnode = document.createTextNode(str);
-							//textnode.style.fontSize="medium";
 							node.appendChild(textnode);
 							sEle.appendChild(node);
 							gflag=1;
@@ -259,7 +254,6 @@ function showCoords(event) {
 								var str=myJson.results[i].senses[0].definition;
 								
 								var textnode = document.createTextNode(str);
-								//textnode.style.fontSize="medium";
 								node.appendChild(textnode);
 								sEle.appendChild(node);
 								flag=1;
@@ -270,23 +264,9 @@ function showCoords(event) {
 						catch(err){}
 					}
 				}
-				/*if(enter==1 && gflag==0)
-				{
-					var textNode=document.createTextNode("sorry cannot find meaning");
-					node.appendChild(textNode);
-					sEle.appendChild(node);
-				}*/
 			});
 	}
 	
-	/*if(enter==1 && gflag==0)
-	{
-		var textNode=document.createTextNode("sorry cannot find meaning");
-		//node.appendChild(textNode);
-		var node2=document.createElement("div");
-		node2.appendChild(textNode);
-		sEle.appendChild(node2);
-	}*/
 	node.style.background='#0070d2';//'#f7cac9';
 	node.style.position="absolute";
 	node.setAttribute("id","ext");
@@ -299,7 +279,6 @@ function showCoords(event) {
 	
 	node.style.zIndex=999999;
 }
-
 
 function remove(event){
 	
